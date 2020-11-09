@@ -69,7 +69,7 @@ namespace PSXDH.BLL
              * 版本更新检查，如果提供此服务请自行补充。
              * 下面代码为原版检查更新代码
              */
-            return 0;
+            /*return 0;
 
             if (version.HasValue)
                 return version.Value;
@@ -79,7 +79,8 @@ namespace PSXDH.BLL
             var regexversion = new Regex(@"#Version:(.*?)#PSX Download Helper", RegexOptions.Singleline);
             var newversion = regexversion.Match(strValue).Groups[1].Value.Replace(".", "");
             version = int.Parse(newversion);
-            return version.Value;
+            return version.Value;*/
+            return 0;
         }
 
         /// <summary>
@@ -88,14 +89,15 @@ namespace PSXDH.BLL
         /// <returns></returns>
         public static string GetUpdateLog()
         {
-            if (!String.IsNullOrEmpty(updatelog))
+            /*if (!String.IsNullOrEmpty(updatelog))
                 return updatelog;
 
             const string strUrl = "http://blog.acgpedia.com/extensions/service/update.txt";
             var strValue = GetWebContent(strUrl);
             var regupdate = new Regex(@"<div id=""newversion"">.*?</div>", RegexOptions.Singleline);
             updatelog = regupdate.Match(strValue).Value;
-            return updatelog;
+            return updatelog;*/
+            return "deactivate";
         }
 
         /// <summary>
@@ -104,7 +106,7 @@ namespace PSXDH.BLL
         /// <returns></returns>
         public static bool UpdateCdn()
         {
-            try
+            /*try
             {
                 var cdnlist = GetWebContent("http://blog.acgpedia.com/extensions/service/cdnhosts.txt");
                 var sw = new StreamWriter(@"Hosts\CdnHosts.ini",false);
@@ -115,7 +117,8 @@ namespace PSXDH.BLL
             catch
             {
                 return false;
-            }
+            }*/
+            return true;
         }
 
         /// <summary>

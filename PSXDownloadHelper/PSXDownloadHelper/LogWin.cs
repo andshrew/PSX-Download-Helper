@@ -53,7 +53,7 @@ namespace PSXDownloadHelper
             {
                 BackColorSet();
                 //关于信息读取
-                webBrowser_weibo.Navigate(Application.StartupPath + @"\Extensions\weibo.htm");
+                //webBrowser_weibo.Navigate(Application.StartupPath + @"\Extensions\weibo.htm");
                 lb_product.Text = AssemblyTitle;
                 lb_vision.Text += AssemblyVersion;
                 lb_copyright.Text = AssemblyCopyright;
@@ -426,7 +426,7 @@ namespace PSXDownloadHelper
         /// <param name="e"></param>
         private void link_translation_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://docs.google.com/spreadsheet/ccc?key=0AidC-uh8A7lkdExSUkVZTjlCV2VfclhUWlJJWTQwV3c#gid=0");
+            //Process.Start("https://docs.google.com/spreadsheet/ccc?key=0AidC-uh8A7lkdExSUkVZTjlCV2VfclhUWlJJWTQwV3c#gid=0");
         }
 
         #endregion
@@ -593,12 +593,12 @@ namespace PSXDownloadHelper
         /// <param name="e"></param>
         private void btn_lxhelp_Click(object sender, EventArgs e)
         {
-            var p = new Process
+            /*var p = new Process
                 {
                     StartInfo = { Arguments = "http://www.elanblog.com/?page_id=14", FileName = "iexplore.exe" }
                 };
             p.Start();
-            p.Close();
+            p.Close();*/
         }
 
         private void btn_server_Click(object sender, EventArgs e)
